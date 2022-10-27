@@ -1,7 +1,11 @@
 package com.sriyank.globotour
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
+import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.NavController
@@ -39,6 +43,29 @@ class MainActivity : AppCompatActivity() {
         toolbar.setupWithNavController(navController, appBarConfiguration)
 
         bottomNav.setupWithNavController(navController)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.add_city_menu,menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId){R.id.action_home->{
+            val  intent = Intent(this,
+                MainActivity::class.java)
+            startActivity(intent)
+            Toast.makeText(this,"List Selected", Toast.LENGTH_SHORT).show()
+        }R.id.action_home->{
+            val  intent = Intent(this,
+                AddcityActivity::class.java)
+            startActivity(intent)
+            Toast.makeText(this,"List", Toast.LENGTH_SHORT).show()
+        }
+
+
+        }
+        return super.onOptionsItemSelected(item)
     }
 
 }

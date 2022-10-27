@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">GloboTour</string>
+    <string name="home">Home</string>
+    <string name="addcity">addcity</string>
+    <string name="City">city</string>
+    <string name="country">country</string>
+    <string name="Add">Add</string>
 </resources>
