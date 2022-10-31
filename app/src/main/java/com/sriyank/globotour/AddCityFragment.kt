@@ -11,6 +11,8 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 import com.sriyank.globotour.city.CityAdapter
 import com.sriyank.globotour.city.GlobalCity
 import com.sriyank.globotour.city.VacationSpots
@@ -20,7 +22,7 @@ import com.sriyank.globotour.city.VacationSpots
 
 class AddCityFragment : Fragment() {
     // TODO: Rename and change types of parameters
-     private lateinit var docRef: DatabaseReference
+    // private lateinit var docRef: DatabaseReference
 
 
     override fun onCreateView(
@@ -31,35 +33,32 @@ class AddCityFragment : Fragment() {
         return   inflater.inflate(R.layout.fragment_add_city, container, false)
     }
 
-    val addButton = view?.findViewById<Button>(R.id.add_city)!!.setOnClickListener {
-
-        //val dcRef = FirebaseDatabase.getInstance().getReference().child("mentors")
-
-        val cityName = view?.findViewById<Button>(R.id.city_name)
-        val countryName = view?.findViewById<Button>(R.id.country)
-
-        val name = cityName.toString()
-        val country = countryName.text.toString()
-
-
-        val globalCity:GlobalCity = GlobalCity(name,country)
-        //docRef.setValue(mentor)
-
-    }
-
-    private fun setUpRecyclerView(view: View?) {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         val addButton = view?.findViewById<Button>(R.id.add_city)
-        addButton!!.setOnClickListener {
+        addButton.setOnClickListener {
+            val docRef = FirebaseDatabase.getInstance().getReference().child("globalcities")
+
+            val cityName = view?.findViewById<EditText>(R.id.city_name)
+            val countryName = view?.findViewById<EditText>(R.id.country)
+
+            val name = cityName.text.toString()
+            val country = countryName!!.text.toString()
 
 
-            
-
-
-
+            val globalCity:GlobalCity = GlobalCity(name,country)
+            docRef.setValue(globalCity)
 
         }
-
     }
+
+
+
+
+
+
+
+
 
 
 

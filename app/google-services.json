@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "199523306719",
+    "project_id": "globaltour-c3515",
+    "storage_bucket": "globaltour-c3515.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:199523306719:android:03897431e80ef8b89a2d6a",
+        "android_client_info": {
+          "package_name": "com.sriyank.globotour"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "199523306719-034posnhlng3f5qe3tgon2e715ft1oc1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCxe7IdRdp1UFtUDKnCoDyhln67BLFTRk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "199523306719-034posnhlng3f5qe3tgon2e715ft1oc1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
