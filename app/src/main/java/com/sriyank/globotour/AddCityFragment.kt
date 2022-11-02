@@ -37,7 +37,7 @@ class AddCityFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val addButton = view?.findViewById<Button>(R.id.add_city)
         addButton.setOnClickListener {
-            val docRef = FirebaseDatabase.getInstance().getReference().child("globalcities")
+            val docRef = FirebaseDatabase.getInstance()
 
             val cityName = view?.findViewById<EditText>(R.id.city_name)
             val countryName = view?.findViewById<EditText>(R.id.country)
@@ -47,7 +47,7 @@ class AddCityFragment : Fragment() {
 
 
             val globalCity:GlobalCity = GlobalCity(name,country)
-            docRef.setValue(globalCity)
+            docRef.getReference("cities").child("globacities").push().setValue(globalCity)
 
         }
     }
