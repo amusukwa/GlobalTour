@@ -19,7 +19,15 @@
     <fragment
         android:id="@+id/fragmentAddCity"
         android:name="com.sriyank.globotour.AddCityFragment"
-        android:label="@string/favorites"
+        android:label="@string/addcity"
         tools:layout="@layout/fragment_favorite" />
+    <fragment
+        android:id="@+id/fragmentGlobalCityList"
+        android:name="com.sriyank.globotour.AddCityFragment"
+        android:label="@string/citylist"
+        tools:layout="@layout/fragment_favorite" />
+
+
+
 
 </navigation>
