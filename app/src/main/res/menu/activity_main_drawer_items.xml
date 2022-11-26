@@ -16,8 +16,9 @@
             android:id="@+id/fragmentAddCity"
             android:icon="@drawable/ic_make_copy"
             android:title="@string/cities" />
+
         <item
-            android:id="@+id/fragmentGlobalCityList"
+            android:id="@+id/fragmentGlobalcitiesList"
             android:icon="@drawable/ic_make_copy"
             android:title="@string/cities" />
 

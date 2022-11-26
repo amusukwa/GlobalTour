@@ -22,10 +22,11 @@
         android:label="@string/addcity"
         tools:layout="@layout/fragment_favorite" />
     <fragment
-        android:id="@+id/fragmentGlobalCityList"
-        android:name="com.sriyank.globotour.AddCityFragment"
-        android:label="@string/citylist"
-        tools:layout="@layout/fragment_favorite" />
+        android:id="@+id/fragmentGlobalcitiesList"
+        android:name="com.sriyank.globotour.GlobalcitiesListFragment"
+        android:label="@string/addcity"
+        tools:layout="@layout/fragment_globalcities_list" />
+
 
 
 

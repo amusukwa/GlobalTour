@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.sriyank.globotour.R
 
-class NewCityAdapter(val context: Context,  private var globalcityList:  ArrayList<GlobalCity>) :
+class NewCityAdapter(val context: Context, var globalcitiesList:  ArrayList<GlobalCity>) :
     RecyclerView.Adapter<NewCityAdapter.CityViewHolder>() {
 
     inner class CityViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView),
@@ -43,12 +43,12 @@ class NewCityAdapter(val context: Context,  private var globalcityList:  ArrayLi
     }
 
     override fun onBindViewHolder(holder: CityViewHolder, position: Int) {
-        val globalCity = globalcityList[position]
+        val globalCity = globalcitiesList[position]
         holder.bind(globalCity, position)
 
     }
 
     override fun getItemCount(): Int {
-        return globalcityList.size
+        return globalcitiesList.size
     }
 }
